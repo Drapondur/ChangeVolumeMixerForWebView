@@ -1,0 +1,15 @@
+﻿<h3>StartPage</h3>
+
+<div>
+    <audio autoplay controls src="@fileName" />
+</div>
+
+<button type="button" @onclick="Play">Play</button>
+@code {
+    string? fileName;
+    Task Play()
+    {
+        fileName = "sound.mp3";
+        return Task.CompletedTask;
+    }
+}
